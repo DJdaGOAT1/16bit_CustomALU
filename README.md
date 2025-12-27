@@ -5,6 +5,7 @@ A parameterizable Custom 16-bit Arithmetic Logic Unit implemented in Verilog HDL
 
 **Language**: Verilog HDL (SystemVerilog compatible)  
 **EDA Tool**: AMD (Xilinx) Vivado Tool
+
 **Design Type**: Combinational logic (asynchronous)
 
 ## Module Interface
