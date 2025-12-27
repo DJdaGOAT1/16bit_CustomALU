@@ -80,3 +80,7 @@ To synthesize the design for an FPGA:
 ## Verification
 
 The ALU design has been rigorously verified through simulation with an extensive testbench suite that validates all 16 operations across various corner cases, including signed/unsigned overflow conditions, boundary value analysis, and comprehensive flag coherency testing.
+
+## Author
+**Devansh Joshi**  
+GitHub: [@DJdaGOAT1](https://github.com/DJdaGOAT1)
