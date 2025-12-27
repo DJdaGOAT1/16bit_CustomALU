@@ -56,6 +56,27 @@ A parameterizable custom 16-bit Arithmetic Logic Unit implemented in Verilog HDL
 - Hardware-accelerated flag generation for seamless processor integration
 - Case-optimized operation decoder for efficient synthesis
 
+## Getting Started
+
+### Running the Simulation in Vivado
+
+1. **Open Vivado** and create a new project or open an existing one
+2. **Add design files**:
+   - Add `alu_design.v` as a design source
+   - Add `alu_testbench.v` as a simulation source
+3. **Set the testbench** as the top module for simulation:
+   - Right-click on `alu_testbench.v` → Set as Top
+4. **Run Behavioral Simulation**:
+   - Click "Run Simulation" → "Run Behavioral Simulation"
+5. **Analyze waveforms** to verify all 16 operations and status flags
+
+### Synthesis (Optional)
+
+To synthesize the design for an FPGA:
+1. Ensure `alu_design.v` is set as the top module
+2. Add appropriate constraints file (`.xdc`) for your target board
+3. Run Synthesis → Implementation → Generate Bitstream
+
 ## Verification
 
 The design has been rigorously verified through simulation with an extensive testbench suite that validates all 16 operations across corner cases, including signed/unsigned overflow conditions, boundary value analysis, and comprehensive flag coherency testing.
