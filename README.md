@@ -56,7 +56,7 @@ A parameterizable custom 16-bit Arithmetic Logic Unit implemented in Verilog HDL
 - Hardware-accelerated flag generation for seamless processor integration
 - Case-optimized operation decoder for efficient synthesis
 
-## Getting Started
+## Steps to Open Project
 
 ### Running the Simulation in Vivado
 
