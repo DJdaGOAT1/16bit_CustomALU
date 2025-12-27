@@ -1,0 +1,215 @@
+Time resolution is 1 ps
+=== ALU Testbench Starting (alu_size = 16) ===
+
+Test 1:  Disabled)
+  A=ffff (65535), B=0001 (1), Select=0000
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+=== Testing Arithmetic Operations ===
+
+Test 2: C = 0x1CF0
+  A=1234 (4660), B=0abc (2748), Select=0000
+  Result=1cf0 (7408), Z=0, N=0, C=0, V=0
+
+Test 3: 00 (carry)
+  A=ffff (65535), B=0001 (1), Select=0000
+  Result=0000 (0), Z=1, N=0, C=1, V=0
+
+Test 4: 1 = 0x8000
+  A=7fff (32767), B=0001 (1), Select=0000
+  Result=8000 (32768), Z=0, N=1, C=0, V=1
+
+Test 5: 0 = 0xC000
+  A=8000 (32768), B=4000 (16384), Select=0000
+  Result=c000 (49152), Z=0, N=1, C=0, V=0
+
+Test 6: 0 = 0x3000
+  A=5000 (20480), B=2000 (8192), Select=0001
+  Result=3000 (12288), Z=0, N=0, C=1, V=0
+
+Test 7: 0 = 0xD000
+  A=2000 (8192), B=5000 (20480), Select=0001
+  Result=d000 (53248), Z=0, N=1, C=0, V=0
+
+Test 8: D = 0x0000
+  A=abcd (43981), B=abcd (43981), Select=0001
+  Result=0000 (0), Z=1, N=0, C=1, V=0
+
+Test 9: 1 = 0x1235
+  A=1234 (4660), B=0000 (0), Select=0010
+  Result=1235 (4661), Z=0, N=0, C=0, V=0
+
+Test 10: 1 = 0x0000
+  A=ffff (65535), B=0000 (0), Select=0010
+  Result=0000 (0), Z=1, N=0, C=1, V=0
+
+Test 11: 1 = 0x1233
+  A=1234 (4660), B=0000 (0), Select=0011
+  Result=1233 (4659), Z=0, N=0, C=1, V=0
+
+Test 12: 1 = 0x0000
+  A=0001 (1), B=0000 (0), Select=0011
+  Result=0000 (0), Z=1, N=0, C=1, V=0
+
+=== Testing Logical Operations ===
+
+Test 13: F = 0x0F00
+  A=ff00 (65280), B=0f0f (3855), Select=0100
+  Result=0f00 (3840), Z=0, N=0, C=0, V=0
+
+Test 14: F = 0x0000
+  A=ff00 (65280), B=00ff (255), Select=0100
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+Test 15: F = 0xFFFF
+  A=f0f0 (61680), B=0f0f (3855), Select=0101
+  Result=ffff (65535), Z=0, N=1, C=0, V=0
+
+Test 16: 0 = 0xC000
+  A=8000 (32768), B=4000 (16384), Select=0101
+  Result=c000 (49152), Z=0, N=1, C=0, V=0
+
+Test 17: 5 = 0xFFFF
+  A=aaaa (43690), B=5555 (21845), Select=0110
+  Result=ffff (65535), Z=0, N=1, C=0, V=0
+
+Test 18: 4 = 0x0000
+  A=1234 (4660), B=1234 (4660), Select=0110
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+Test 19: A = 0x5555
+  A=aaaa (43690), B=0000 (0), Select=0111
+  Result=5555 (21845), Z=0, N=0, C=0, V=0
+
+Test 20: 0 = 0xFFFF
+  A=0000 (0), B=0000 (0), Select=0111
+  Result=ffff (65535), Z=0, N=1, C=0, V=0
+
+Test 21: F = 0x0000
+  A=ffff (65535), B=0000 (0), Select=0111
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+=== Testing Shift Operations ===
+
+Test 22: 1 = 0x2468
+  A=1234 (4660), B=0000 (0), Select=1000
+  Result=2468 (9320), Z=0, N=0, C=0, V=0
+
+Test 23: 1 = 0x0002
+  A=8001 (32769), B=0000 (0), Select=1000
+  Result=0002 (2), Z=0, N=0, C=1, V=0
+
+Test 24: 1 = 0x8000
+  A=4000 (16384), B=0000 (0), Select=1000
+  Result=8000 (32768), Z=0, N=1, C=0, V=0
+
+Test 25: 1 = 0x4000
+  A=8000 (32768), B=0000 (0), Select=1001
+  Result=4000 (16384), Z=0, N=0, C=0, V=0
+
+Test 26: 1 = 0x091A
+  A=1235 (4661), B=0000 (0), Select=1001
+  Result=091a (2330), Z=0, N=0, C=1, V=0
+
+Test 27: 1 = 0xF800
+  A=f000 (61440), B=0000 (0), Select=1010
+  Result=f800 (63488), Z=0, N=1, C=0, V=0
+
+Test 28: 1 = 0x3800
+  A=7000 (28672), B=0000 (0), Select=1010
+  Result=3800 (14336), Z=0, N=0, C=0, V=0
+
+Test 29: 1 = 0xC000
+  A=8001 (32769), B=0000 (0), Select=1010
+  Result=c000 (49152), Z=0, N=1, C=1, V=0
+
+Test 30: L = 0x0003
+  A=8001 (32769), B=0000 (0), Select=1011
+  Result=0003 (3), Z=0, N=0, C=1, V=0
+
+Test 31: L = 0x2468
+  A=1234 (4660), B=0000 (0), Select=1011
+  Result=2468 (9320), Z=0, N=0, C=0, V=0
+
+Test 32: L = 0xFFFF
+  A=ffff (65535), B=0000 (0), Select=1011
+  Result=ffff (65535), Z=0, N=1, C=1, V=0
+
+Test 33: R = 0xC000
+  A=8001 (32769), B=0000 (0), Select=1100
+  Result=c000 (49152), Z=0, N=1, C=1, V=0
+
+Test 34: R = 0x091A
+  A=1234 (4660), B=0000 (0), Select=1100
+  Result=091a (2330), Z=0, N=0, C=0, V=0
+
+=== Testing Comparison Operations ===
+
+Test 35: 0x5A5A = 1
+  A=5a5a (23130), B=5a5a (23130), Select=1101
+  Result=0001 (1), Z=0, N=0, C=0, V=0
+
+Test 36: 0xA5A5 = 0
+  A=5a5a (23130), B=a5a5 (42405), Select=1101
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+Test 37: 0x0000 = 1
+  A=0000 (0), B=0000 (0), Select=1101
+  Result=0001 (1), Z=0, N=0, C=0, V=0
+
+Test 38: 0xFFFF = 1
+  A=ffff (65535), B=ffff (65535), Select=1101
+  Result=0001 (1), Z=0, N=0, C=0, V=0
+
+Test 39: 0x3000 = 1
+  A=5000 (20480), B=3000 (12288), Select=1110
+  Result=0001 (1), Z=0, N=0, C=0, V=0
+
+Test 40: 0x5000 = 0
+  A=3000 (12288), B=5000 (20480), Select=1110
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+Test 41: 0x1234 = 0
+  A=1234 (4660), B=1234 (4660), Select=1110
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+Test 42: 0x2000 = 1
+  A=1000 (4096), B=2000 (8192), Select=1111
+  Result=0001 (1), Z=0, N=0, C=0, V=0
+
+Test 43: 0x1000 = 0
+  A=2000 (8192), B=1000 (4096), Select=1111
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+Test 44: 0xABCD = 0
+  A=abcd (43981), B=abcd (43981), Select=1111
+  Result=0000 (0), Z=1, N=0, C=0, V=0
+
+=== Testing Edge Cases ===
+
+Test 45: F = 0xFFFF
+  A=ffff (65535), B=ffff (65535), Select=0100
+  Result=ffff (65535), Z=0, N=1, C=0, V=0
+
+Test 46: F = 0xFFFE
+  A=ffff (65535), B=ffff (65535), Select=0000
+  Result=fffe (65534), Z=0, N=1, C=1, V=0
+
+Test 47: 1 = 0xFFFF
+  A=0000 (0), B=0000 (0), Select=0011
+  Result=ffff (65535), Z=0, N=1, C=0, V=0
+
+Test 48: F = 0x0F0F
+  A=f0f0 (61680), B=ffff (65535), Select=0110
+  Result=0f0f (3855), Z=0, N=0, C=0, V=0
+
+Test 49: 0xFFFF = 1
+  A=fffe (65534), B=ffff (65535), Select=1111
+  Result=0001 (1), Z=0, N=0, C=0, V=0
+
+
+=== Test Summary ===
+Total Tests: 49
+Errors: 0
+ALL TESTS PASSED!
+$finish called at time : 500 ns : File "C:/Users/Joshi/VerilogProjects/16bit_CustomALU_Project/16_bit_alu.srcs/sim_1/new/alu_tb.v" Line 561
