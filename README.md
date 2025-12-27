@@ -58,5 +58,3 @@ A parameterizable Custom 16-bit Arithmetic Logic Unit implemented in Verilog HDL
 ## Simulation
 
 The design has been verified through simulation with a comprehensive testbench that exercises all 16 operations, including edge cases for overflow and carry conditions.
-
-**Created**: December 26, 2025
