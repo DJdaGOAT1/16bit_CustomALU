@@ -4,7 +4,7 @@
 A parameterizable custom 16-bit Arithmetic Logic Unit (ALU) implemented in Verilog HDL. The ALU features a complete instruction set with 16 distinct operations including arithmetic, logical, shift, rotate, and comparison operations, along with comprehensive status flag generation for processor integration, and is suitable for direct synthesis and implementation on FPGAs.
 
 **Language**: Verilog HDL (SystemVerilog compatible)  
-**EDA Tool**: AMD (Xilinx) Vivado Design Suite  
+**EDA Tool**: AMD (Xilinx) Vivado 
 **Architecture**: Pure combinational logic (asynchronous execution)
 
 ## Module Interface
